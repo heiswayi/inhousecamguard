@@ -9,7 +9,7 @@ namespace InhouseCamguard
 {
     public static class FileHelpers
     {
-        private const string AppName = "PWCIHMD";
+        private const string AppName = "Inhouse Camguard";
         public const string CsvExtension = ".csv";
 
         public static string GetDefaultDirectory()
