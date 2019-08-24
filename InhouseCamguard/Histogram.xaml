@@ -1,0 +1,158 @@
+﻿<Window
+    x:Class="InhouseCamguard.Histogram"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:InhouseCamguard"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="histogramWindow"
+    Width="600"
+    Height="400"
+    mc:Ignorable="d">
+    <Grid Margin="0,10,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <GroupBox
+            Grid.Row="0"
+            Grid.Column="0"
+            BorderThickness="0"
+            Header="Luminosity">
+            <Border
+                x:Name="borderLuminance"
+                Margin="4"
+                Background="White"
+                BorderBrush="Black"
+                BorderThickness="1">
+                <Grid>
+                    <Polygon
+                        x:Name="polygonLuminanceHistogramPoints"
+                        Fill="Black"
+                        Opacity="0.8"
+                        Stretch="Fill" />
+                    <Line
+                        x:Name="lineLuminance1"
+                        Stroke="Gray"
+                        StrokeDashArray="2"
+                        StrokeThickness="1"
+                        Y1="0"
+                        Y2="{Binding ElementName=borderLuminance, Path=ActualHeight}" />
+                    <Line
+                        x:Name="lineLuminance2"
+                        Stroke="Gray"
+                        StrokeDashArray="2"
+                        StrokeThickness="1"
+                        Y1="0"
+                        Y2="{Binding ElementName=borderLuminance, Path=ActualHeight}" />
+                </Grid>
+            </Border>
+        </GroupBox>
+        <GroupBox
+            Grid.Row="0"
+            Grid.Column="1"
+            BorderThickness="0"
+            Header="Red">
+            <Border
+                x:Name="borderRed"
+                Margin="4"
+                Background="White"
+                BorderBrush="Black"
+                BorderThickness="1">
+                <Grid>
+                    <Polygon
+                        x:Name="polygonRedColorHistogramPoints"
+                        Fill="Red"
+                        Opacity="0.8"
+                        Stretch="Fill" />
+                    <Line
+                        x:Name="lineRed1"
+                        Stroke="Gray"
+                        StrokeDashArray="2"
+                        StrokeThickness="1"
+                        Y1="0"
+                        Y2="{Binding ElementName=borderRed, Path=ActualHeight}" />
+                    <Line
+                        x:Name="lineRed2"
+                        Stroke="Gray"
+                        StrokeDashArray="2"
+                        StrokeThickness="1"
+                        Y1="0"
+                        Y2="{Binding ElementName=borderRed, Path=ActualHeight}" />
+                </Grid>
+            </Border>
+        </GroupBox>
+        <GroupBox
+            Grid.Row="1"
+            Grid.Column="0"
+            BorderThickness="0"
+            Header="Green">
+            <Border
+                x:Name="borderGreen"
+                Margin="4"
+                Background="White"
+                BorderBrush="Black"
+                BorderThickness="1">
+                <Grid>
+                    <Polygon
+                        x:Name="polygonGreenColorHistogramPoints"
+                        Fill="Green"
+                        Opacity="0.8"
+                        Stretch="Fill" />
+                    <Line
+                        x:Name="lineGreen1"
+                        Stroke="Gray"
+                        StrokeDashArray="2"
+                        StrokeThickness="1"
+                        Y1="0"
+                        Y2="{Binding ElementName=borderGreen, Path=ActualHeight}" />
+                    <Line
+                        x:Name="lineGreen2"
+                        Stroke="Gray"
+                        StrokeDashArray="2"
+                        StrokeThickness="1"
+                        Y1="0"
+                        Y2="{Binding ElementName=borderGreen, Path=ActualHeight}" />
+                </Grid>
+            </Border>
+        </GroupBox>
+        <GroupBox
+            Grid.Row="1"
+            Grid.Column="1"
+            BorderThickness="0"
+            Header="Blue">
+            <Border
+                x:Name="borderBlue"
+                Margin="4"
+                Background="White"
+                BorderBrush="Black"
+                BorderThickness="1">
+                <Grid>
+                    <Polygon
+                        x:Name="polygonBlueColorHistogramPoints"
+                        Fill="Blue"
+                        Opacity="0.8"
+                        Stretch="Fill" />
+                    <Line
+                        x:Name="lineBlue1"
+                        Stroke="Gray"
+                        StrokeDashArray="2"
+                        StrokeThickness="1"
+                        Y1="0"
+                        Y2="{Binding ElementName=borderBlue, Path=ActualHeight}" />
+                    <Line
+                        x:Name="lineBlue2"
+                        Stroke="Gray"
+                        StrokeDashArray="2"
+                        StrokeThickness="1"
+                        Y1="0"
+                        Y2="{Binding ElementName=borderBlue, Path=ActualHeight}" />
+                </Grid>
+            </Border>
+        </GroupBox>
+    </Grid>
+</Window>
